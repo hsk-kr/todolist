@@ -1,0 +1,214 @@
+$c-primary: #5f4a8b;
+$c-sub: #dbceff;
+$c-gray: #666;
+$c-lightGray: #aaa;
+
+body {
+	background-color: #f5f4fb;
+}
+.App {
+	max-width: 1130px;
+	background-color: #f5f4fb;
+	margin: 0 auto;
+	min-height: 100vh;
+	box-shadow: 0 0 15px #6c5a823b;
+}
+
+/* header */
+.header {
+	padding: 8px 23px 8px 20px;
+	overflow: hidden;
+	background-color: $c-primary;
+}
+.header-left {
+	float: left;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	& svg {
+		font-size: 1.5em;
+		vertical-align: bottom;
+		margin-right: 7px;
+	}
+}
+.header-right {
+	float: right;
+	cursor: pointer;
+	&__txt {
+		color: #fff;
+		margin-right: 15px;
+		height: 30px;
+		line-height: 28px;
+	}
+	&__photo-wrap {
+		float: right;
+		width: 30px;
+		height: 30px;
+		border-radius: 15px;
+		background-color: #fff;
+		position: relative;
+		& svg {
+			color: $c-primary;
+			font-size: 1.5em;
+			position: absolute;
+			left: calc(50% - 10px);
+			top: calc(50% - 11px);
+		}
+	}
+}
+
+/* contents */
+.contents-top {
+	padding: 20px;
+	overflow: hidden;
+}
+.top-left {
+	float: left;
+	&__list-type {
+		color: $c-primary;
+		font-size: 18px;
+		font-weight: bold;
+		float: left;
+	}
+	&__date {
+		clear: both;
+		margin-top: 40px;
+	}
+}
+.top-right {
+	float: right;
+}
+
+.todolist {
+	padding: 0 20px;
+	overflow: hidden;
+	&__item {
+		width: calc(50% - 10px);
+		height: 95px;
+		background: #fff;
+		float: left;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		padding: 20px 20px 30px;
+		position: relative;
+		&:nth-child(even) {
+			margin-left: 20px;
+		}
+		& .btn-icon {
+			position: absolute;
+			right: 20px;
+			bottom: calc(50% - 17px);
+		}
+	}
+}
+.img-wrap {
+	width: auto;
+	height: auto;
+	max-width: 55px;
+	max-height: 55px;
+	float: left;
+	margin-right: 15px;
+	border-radius: 5px;
+	overflow: hidden;
+	& img {
+		width: 55px;
+		height: 55px;
+	}
+}
+.txt-wrap {
+	width: 180px;
+	float: left;
+	margin-right: 15px;
+	text-align: left;
+	& .tit {
+		font-size: 1.3em;
+		color: $c-primary;
+		font-weight: bold;
+		line-height: 1;
+		margin-bottom: 5px;
+	}
+	& .txt {
+		color: $c-primary;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		display: -webkit-box;
+		-webkit-line-clamp: 2; /* ellipsis line */
+		-webkit-box-orient: vertical;
+
+		/* webkit 엔진을 사용하지 않는 브라우저를 위한 속성. */
+		/* height = line-height * line = 1.2em * 3 = 3.6em  */
+		line-height: 1.2em;
+		height: 2.4em;
+	}
+}
+
+.state-wrap {
+	text-align: left;
+	width: 170px;
+	float: left;
+	line-height: 1.5;
+	& .date {
+		display: block;
+		font-size: 11px;
+		color: $c-lightGray;
+	}
+	& .count {
+		font-size: 14px;
+		color: $c-gray;
+		font-weight: 500;
+	}
+	& .state {
+		border: 1px solid $c-sub;
+		width: 100%;
+		height: 15px;
+		border-radius: 5px;
+		padding: 1px;
+		margin-top: 5px;
+	}
+	& .state-bar {
+		width: 100%;
+		height: 100%;
+		background: $c-sub;
+		border-radius: 4px 0 0 4px;
+	}
+}
+
+/* datepicker */
+.MuiPickersToolbar-toolbar {
+	background-color: $c-primary !important;
+}
+.MuiPaper-root {
+	transform: translateX(49px) !important;
+}
+.MuiPickersDay-daySelected {
+	background-color: $c-primary !important;
+}
+.MuiPickersDay-current {
+	color: $c-primary !important;
+}
+.MuiTypography-colorPrimary {
+	color: $c-primary !important;
+}
+.MuiPickersDay-daySelected {
+	color: #fff !important;
+}
+.MuiOutlinedInput-input {
+	padding: 10px !important;
+}
+.MuiIconButton-root {
+	padding: 0 !important;
+}
+.MuiInputBase-input {
+	width: 100px !important;
+	font-size: 14px;
+}
+.MuiOutlinedInput-root.Mui-focused
+	.MuiOutlinedInput-notchedOutline {
+	border-color: $c-primary !important;
+}
+.top-left__date .MuiSvgIcon-root {
+	color: $c-primary;
+	position: relative;
+	top: 1px;
+}
