@@ -18,7 +18,6 @@ const todolist = (props) => {
 					어쩌고저쩌고 텍스트텟스트텍스트
 				</p>
 			</div>
-			y
 			<div className="state-wrap">
 				<span className="date">2020.10.10 00:00 까지</span>
 				<span className="count">
